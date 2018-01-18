@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{738079AA-B875-49C8-B686-A445E873274F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vendor</RootNamespace>
+    <AssemblyName>Vendor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IRModels">
+      <HintPath>..\..\..\..\IncidentTracking\Common\IRModels\IRModels\bin\Release\IRModels.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TTModels, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Common\TTModels\TTModels\bin\Release\TTModels.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\clsConversionFunctions.cs" />
+    <Compile Include="Classes\clsDataStructures.cs" />
+    <Compile Include="Classes\clsParcers.cs" />
+    <Compile Include="clsParcers.cs" />
+    <Compile Include="CorrectionForms\frm_EriePrinterRounding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorrectionForms\frm_EriePrinterRounding.Designer.cs">
+      <DependentUpon>frm_EriePrinterRounding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CorrectionForms\frm_Erie_FixRounding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CorrectionForms\frm_Erie_FixRounding.Designer.cs">
+      <DependentUpon>frm_Erie_FixRounding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Imports\ErieCounty\frm_ImportCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ErieCounty\frm_ImportCM.Designer.cs">
+      <DependentUpon>frm_ImportCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ErieCounty\frm_ImportInterims.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ErieCounty\frm_ImportInterims.Designer.cs">
+      <DependentUpon>frm_ImportInterims.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ErieCounty\frm_ImportSchool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ErieCounty\frm_ImportSchool.Designer.cs">
+      <DependentUpon>frm_ImportSchool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ErieCounty\frm_Initialize_CityOfCorryPerCapita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ErieCounty\frm_Initialize_CityOfCorryPerCapita.Designer.cs">
+      <DependentUpon>frm_Initialize_CityOfCorryPerCapita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ErieCounty\frm_PamStreetLights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\ErieCounty\frm_PamStreetLights.Designer.cs">
+      <DependentUpon>frm_PamStreetLights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\frm_Shippensburg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imports\frm_Shippensburg.Designer.cs">
+      <DependentUpon>frm_Shippensburg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentTracking\frm_IncidentTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncidentTracking\frm_IncidentTracking.Designer.cs">
+      <DependentUpon>frm_IncidentTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testing\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testing\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\frm_Gmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testing\frm_Gmail.Designer.cs">
+      <DependentUpon>frm_Gmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaintenance\frm_UserMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMaintenance\frm_UserMaintenance.Designer.cs">
+      <DependentUpon>frm_UserMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_Bills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_Bills.Designer.cs">
+      <DependentUpon>frm_Bills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_Exonerations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_Exonerations.Designer.cs">
+      <DependentUpon>frm_Exonerations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_Moneys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_Moneys.Designer.cs">
+      <DependentUpon>frm_Moneys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_Parcels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_Parcels.Designer.cs">
+      <DependentUpon>frm_Parcels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_Remittances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_Remittances.Designer.cs">
+      <DependentUpon>frm_Remittances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_TaxRolls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_TaxRolls.Designer.cs">
+      <DependentUpon>frm_TaxRolls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V2\Conversions\frm_User.Designer.cs">
+      <DependentUpon>frm_User.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CorrectionForms\frm_EriePrinterRounding.resx">
+      <DependentUpon>frm_EriePrinterRounding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CorrectionForms\frm_Erie_FixRounding.resx">
+      <DependentUpon>frm_Erie_FixRounding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ErieCounty\frm_ImportCM.resx">
+      <DependentUpon>frm_ImportCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ErieCounty\frm_ImportInterims.resx">
+      <DependentUpon>frm_ImportInterims.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ErieCounty\frm_ImportSchool.resx">
+      <DependentUpon>frm_ImportSchool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ErieCounty\frm_Initialize_CityOfCorryPerCapita.resx">
+      <DependentUpon>frm_Initialize_CityOfCorryPerCapita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\ErieCounty\frm_PamStreetLights.resx">
+      <DependentUpon>frm_PamStreetLights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imports\frm_Shippensburg.resx">
+      <DependentUpon>frm_Shippensburg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncidentTracking\frm_IncidentTracking.resx">
+      <DependentUpon>frm_IncidentTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Testing\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testing\frm_Gmail.resx">
+      <DependentUpon>frm_Gmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMaintenance\frm_UserMaintenance.resx">
+      <DependentUpon>frm_UserMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Conversions\frm_Bills.resx">
+      <DependentUpon>frm_Bills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Conversions\frm_Exonerations.resx">
+      <DependentUpon>frm_Exonerations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Conversions\frm_Moneys.resx">
+      <DependentUpon>frm_Moneys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Conversions\frm_Parcels.resx">
+      <DependentUpon>frm_Parcels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Conversions\frm_Remittances.resx">
+      <DependentUpon>frm_Remittances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Conversions\frm_TaxRolls.resx">
+      <DependentUpon>frm_TaxRolls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V2\Conversions\frm_User.resx">
+      <DependentUpon>frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
