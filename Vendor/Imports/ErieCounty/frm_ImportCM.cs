@@ -858,7 +858,7 @@ namespace Vendor.Imports.ErieCounty
                 {
                     TTModels.clsOriginal.tblLineItemTax libItem = new TTModels.clsOriginal.tblLineItemTax();
                     libItem = buildLineItems(countyRec, Convert.ToInt32(this.txtLibraryID.Text), Convert.ToDecimal(this.txtLibraryRate.Text), billNumber);
-                    lineItems.Add(libItem);
+                    lineItems.Add(libItem); 
                 }
                 if (this.chkCounty.Checked)
                 {
